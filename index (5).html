@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Escolar Digital</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body{
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        header{
+            background: #1e3a5f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav{
+            background: #16324f;
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover{
+            color: #ffd166;
+        }
+
+        section{
+            padding: 50px 20px;
+        }
+
+        .hero{
+            text-align: center;
+            background: white;
+        }
+
+        .hero h1{
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .hero p{
+            font-size: 18px;
+            color: #555;
+        }
+
+        .contenedor{
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .libros{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card{
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover{
+            transform: translateY(-5px);
+        }
+
+        .card h3{
+            margin-bottom: 10px;
+            color: #1e3a5f;
+        }
+
+        .card p{
+            margin-bottom: 15px;
+        }
+
+        .btn{
+            display: inline-block;
+            background: #1e3a5f;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .btn:hover{
+            background: #274d7d;
+        }
+
+        .detalle{
+            background: white;
+            margin-top: 20px;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        footer{
+            margin-top: 40px;
+            background: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header id="inicio">
+        <h1>Biblioteca Escolar Digital</h1>
+        <p>Aprende, investiga y descubre nuevos conocimientos</p>
+    </header>
+
+    <!-- MENÚ -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#libros">Libros</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- BIENVENIDA -->
+    <section class="hero">
+        <h1>Bienvenido</h1>
+        <p>
+            Explora una colección de libros digitales para estudiantes,
+            docentes e investigadores.
+        </p>
+    </section>
+
+    <!-- LIBROS -->
+    <section id="libros">
+        <div class="contenedor">
+
+            <h2 style="margin-bottom:20px;">Libros Destacados</h2>
+
+            <div class="libros">
+
+                <div class="card">
+                    <h3>Matemáticas Básicas</h3>
+                    <p>Aprende álgebra, geometría y cálculo de manera sencilla.</p>
+                    <a href="#matematicas" class="btn">Leer más</a>
+                </div>
+
+                <div class="card">
+                    <h3>Historia Universal</h3>
+                    <p>Descubre los acontecimientos más importantes del mundo.</p>
+                    <a href="#historia" class="btn">Leer más</a>
+                </div>
+
+                <div class="card">
+                    <h3>Ciencias Naturales</h3>
+                    <p>Explora temas sobre biología, química y física.</p>
+                    <a href="#ciencias" class="btn">Leer más</a>
+                </div>
+
+                <div class="card">
+                    <h3>Literatura</h3>
+                    <p>Encuentra novelas, poemas y obras clásicas.</p>
+                    <a href="#literatura" class="btn">Leer más</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section id="categorias">
+        <div class="contenedor">
+
+            <h2 style="margin-bottom:20px;">Categorías</h2>
+
+            <div id="matematicas" class="detalle">
+                <h3>📘 Matemáticas Básicas</h3>
+                <p>
+                    Incluye temas de álgebra, geometría, cálculo y resolución
+                    de problemas matemáticos para estudiantes.
+                </p>
+            </div>
+
+            <div id="historia" class="detalle">
+                <h3>🌍 Historia Universal</h3>
+                <p>
+                    Aprende sobre civilizaciones antiguas, guerras importantes
+                    y acontecimientos históricos del mundo.
+                </p>
+            </div>
+
+            <div id="ciencias" class="detalle">
+                <h3>🔬 Ciencias Naturales</h3>
+                <p>
+                    Explora biología, química y física con recursos fáciles
+                    de comprender.
+                </p>
+            </div>
+
+            <div id="literatura" class="detalle">
+                <h3>📖 Literatura</h3>
+                <p>
+                    Descubre novelas, cuentos y poemas clásicos de distintos autores.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+        <div class="contenedor">
+            <h2>Contacto</h2>
+            <p>Email: biblioteca@escuela.com</p>
+            <p>Teléfono: +52 624 000 0000</p>
+            <p>Dirección: Biblioteca Escolar Digital</p>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>© 2026 Biblioteca Escolar Digital | Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
